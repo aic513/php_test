@@ -1,0 +1,44 @@
+{
+	"name": "denis/php_game",
+	"description": "php game project",
+	"license": "MIT",
+	"authors": [
+		{
+			"name": "aic513",
+			"email": "aic513@mail.ru"
+		}
+	],
+	"type": "project",
+	"bin": [
+		"bin/game"
+	],
+	"keywords": [
+		"test",
+		"aic513",
+		"dogs"
+	],
+	"minimum-stability": "dev",
+	"prefer-stable": true,
+	"require": {
+		"wp-cli/php-cli-tools": "*"
+	},
+	"require-dev": {
+		"squizlabs/php_codesniffer": "*",
+		"phpunit/phpunit": "~7.0"
+	},
+	"scripts": {
+		"phpcs": "phpcs",
+		"phpcbf": "phpcbf",
+		"phpunit": "phpunit",
+		"test": "phpunit tests"
+	},
+	"autoload": {
+		"psr-4": {
+			"Dogs\\": "src",
+			"Dogs\\Tests\\": "tests"
+		},
+		"files": [
+			"src/Cli.php"
+		]
+	}
+}
