@@ -10,12 +10,18 @@
 	],
 	"type": "project",
 	"bin": [
-		"bin/game"
+		"bin/start",
+		"bin/dachshund",
+		"bin/mops",
+		"bin/plush labrador",
+		"bin/rubber dachshund",
+		"bin/shiba inu"
 	],
 	"keywords": [
 		"test",
 		"aic513",
-		"dogs"
+		"dogs",
+		"php game"
 	],
 	"minimum-stability": "dev",
 	"prefer-stable": true,
@@ -23,6 +29,7 @@
 		"wp-cli/php-cli-tools": "*"
 	},
 	"require-dev": {
+		"symfony/var-dumper": "^4.0",
 		"squizlabs/php_codesniffer": "*",
 		"phpunit/phpunit": "~7.0"
 	},
@@ -38,7 +45,11 @@
 			"Dogs\\Tests\\": "tests"
 		},
 		"files": [
-			"src/Cli.php"
+			"src/bootstrap.php",
+			"src/Cli.php",
+			"src/GameFlow.php",
+			"src/skills/barking.php",
+			"src/skills/hunting.php"
 		]
 	}
 }
