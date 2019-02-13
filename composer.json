@@ -13,7 +13,7 @@
 		"bin/start",
 		"bin/dachshund",
 		"bin/mops",
-		"bin/plush labrador",
+		"bin/plush-labrador",
 		"bin/rubber dachshund",
 		"bin/shiba inu"
 	],
@@ -26,7 +26,8 @@
 	"minimum-stability": "dev",
 	"prefer-stable": true,
 	"require": {
-		"wp-cli/php-cli-tools": "*"
+		"wp-cli/php-cli-tools": "*",
+		"funct/funct": "*"
 	},
 	"require-dev": {
 		"symfony/var-dumper": "^4.0",
@@ -48,7 +49,7 @@
 			"src/bootstrap.php",
 			"src/Cli.php",
 			"src/GameFlow.php",
-			"src/skills/barking.php",
+			"src/skills/sound.php",
 			"src/skills/hunting.php"
 		]
 	}

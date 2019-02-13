@@ -1,9 +1,0 @@
-#!/usr/bin/env php
-
-<?php
-require_once __DIR__ . '/../src/bootstrap.php';
-
-$z = array_slice($_SERVER['argv'], 1);
-dd($z);
-
-?>
