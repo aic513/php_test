@@ -7,24 +7,33 @@ use function cli\prompt;
 
 function run()
 {
-	greeting();
-	nameAsking();
-	getDescription();
+    greeting();
+    getDescription();
 }
 
 function greeting()
 {
-	line('Welcome to the dog shelter!');
-}
-
-function nameAsking()
-{
-	$name = prompt('May I have your name?');
-	line('Hello, %s!', $name);
+    line('Welcome to the dog farm!');
 }
 
 function getDescription()
 {
-	line('Now you are start to play a simple php game!');
-	line('You can choice yor favorite dog and play with it!');
+    $name = prompt('May I have your name?');
+    line('Hello, %s!', $name);
+    line('Now you are start to play a simple php game!');
+    line('You can see  a list of our dogs below:' . PHP_EOL);
+    line(implode(PHP_EOL, getListOfDogs()) . PHP_EOL);
+    line('You can choice your favorite dog and play with it!');
+    line('Good luck, %s!', $name);
+}
+
+function getListOfDogs()
+{
+    return [
+        ' - dachshund',
+        ' - mops',
+        ' - plush-labrador',
+        ' - rubber-dachshund',
+        ' - shiba-inu',
+    ];
 }

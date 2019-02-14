@@ -1,56 +1,56 @@
 {
-	"name": "denis/php_game",
-	"description": "php game project",
-	"license": "MIT",
-	"authors": [
-		{
-			"name": "aic513",
-			"email": "aic513@mail.ru"
-		}
-	],
-	"type": "project",
-	"bin": [
-		"bin/start",
-		"bin/dachshund",
-		"bin/mops",
-		"bin/plush-labrador",
-		"bin/rubber dachshund",
-		"bin/shiba inu"
-	],
-	"keywords": [
-		"test",
-		"aic513",
-		"dogs",
-		"php game"
-	],
-	"minimum-stability": "dev",
-	"prefer-stable": true,
-	"require": {
-		"wp-cli/php-cli-tools": "*",
-		"funct/funct": "*"
-	},
-	"require-dev": {
-		"symfony/var-dumper": "^4.0",
-		"squizlabs/php_codesniffer": "*",
-		"phpunit/phpunit": "~7.0"
-	},
-	"scripts": {
-		"phpcs": "phpcs",
-		"phpcbf": "phpcbf",
-		"phpunit": "phpunit",
-		"test": "phpunit tests"
-	},
-	"autoload": {
-		"psr-4": {
-			"Dogs\\": "src",
-			"Dogs\\Tests\\": "tests"
-		},
-		"files": [
-			"src/bootstrap.php",
-			"src/Cli.php",
-			"src/GameFlow.php",
-			"src/skills/sound.php",
-			"src/skills/hunting.php"
-		]
-	}
+    "name": "aic513/php_game",
+    "description": "php game project",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "aic513",
+            "email": "aic513@mail.ru"
+        }
+    ],
+    "type": "project",
+    "bin": [
+        "bin/start",
+        "bin/dachshund",
+        "bin/mops",
+        "bin/plush-labrador",
+        "bin/rubber dachshund",
+        "bin/shiba inu"
+    ],
+    "keywords": [
+        "test",
+        "aic513",
+        "dogs",
+        "php game"
+    ],
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "require": {
+        "wp-cli/php-cli-tools": "*",
+        "funct/funct": "*"
+    },
+    "require-dev": {
+        "symfony/var-dumper": "^4.0",
+        "squizlabs/php_codesniffer": "*",
+        "phpunit/phpunit": "~7.0"
+    },
+    "scripts": {
+        "phpcs": "phpcs",
+        "phpcbf": "phpcbf",
+        "phpunit": "phpunit",
+        "test": "phpunit tests"
+    },
+    "autoload": {
+        "psr-4": {
+            "Dogs\\": "src",
+            "Dogs\\Tests\\": "tests"
+        },
+        "files": [
+            "src/bootstrap.php",
+            "src/Cli.php",
+            "src/GameFlow.php",
+            "src/skills/sound.php",
+            "src/skills/hunting.php"
+        ]
+    }
 }

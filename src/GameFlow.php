@@ -8,16 +8,16 @@ use function Dog\skills\hunting;
 use function Funct\Collection\flatten;
 
 const DOG_ACTIONS = [
-	'sound',
-	'hunt',
+    'sound',
+    'hunt',
 ];
 
 const DOG_TYPES = [
-	'bin/dachshund',
-	'bin/mops',
-	'bin/plush-labrador',
-	'bin/rubber-dachshund',
-	'bin/shiba-inu',
+    'bin/dachshund',
+    'bin/mops',
+    'bin/plush-labrador',
+    'bin/rubber-dachshund',
+    'bin/shiba-inu',
 ];
 
 /**
@@ -25,13 +25,13 @@ const DOG_TYPES = [
  */
 function gameFlow()
 {
-	list($dogType, $dogAction) = flatten(func_get_args());
+    list($dogType, $dogAction) = flatten(func_get_args());
 
-	if (!checkDogType($dogType) || !checkDogAction($dogAction)) {
-		throw new \Exception('Your command is not correct');
-	}
+    if (!checkDogType($dogType) || !checkDogAction($dogAction)) {
+        throw new \Exception('Your command or dog type are not correct');
+    }
 
-	line(getAnswer($dogType, $dogAction));
+    line(getAnswer($dogType, $dogAction));
 }
 
 /**
@@ -43,28 +43,27 @@ function gameFlow()
  */
 function getAnswer($dogType, $dogAction)
 {
-	$answer = '';
-	switch ($dogAction) {
-		case 'sound':
-			$answer .= barking($dogType);
-			break;
-		case 'hunt':
-			$answer .= hunting($dogType);
-			break;
-		default:
-			throw new \Exception('This command isn\'t exist');
-	}
+    $answer = '';
+    switch ($dogAction) {
+        case 'sound':
+            $answer .= barking($dogType);
+            break;
+        case 'hunt':
+            $answer .= hunting($dogType);
+            break;
+        default:
+            break;
+    }
 
-	return $answer;
+    return $answer;
 }
 
 function checkDogType($dogType)
 {
-	return in_array($dogType, DOG_TYPES, true);
+    return in_array($dogType, DOG_TYPES, true);
 }
 
 function checkDogAction($dogAction)
 {
-	return in_array($dogAction, DOG_ACTIONS, true);
+    return in_array($dogAction, DOG_ACTIONS, true);
 }
-

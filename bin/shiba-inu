@@ -7,7 +7,7 @@ use function Dogs\gameFlow;
 
 $infoAboutDog = array_slice($_SERVER['argv'], 0, 2);
 try {
-	gameFlow($infoAboutDog);
+    gameFlow($infoAboutDog);
 } catch (\Exception $exception) {
-	echo $exception->getMessage() . PHP_EOL;
+    echo $exception->getMessage() . PHP_EOL;
 }

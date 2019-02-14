@@ -1,5 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<phpunit colors="true">
+<phpunit
+    bootstrap="vendor/autoload.php"
+    backupGlobals="true"
+    processIsolation="false"
+    verbose="true"
+    colors="true">
     <filter>
         <whitelist processUncoveredFilesFromWhitelist="true">
             <directory suffix=".php">./src</directory>
