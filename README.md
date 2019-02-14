@@ -19,3 +19,4 @@
 [![Build Status](https://travis-ci.org/aic513/php_test.svg?branch=master)](https://travis-ci.org/aic513/php_test)
 
 
+[![asciicast](https://asciinema.org/a/MG0e10EeZzPRSmZniZVDK383p.png)](https://asciinema.org/a/MG0e10EeZzPRSmZniZVDK383p)
